@@ -23,13 +23,17 @@ namespace Rasterizer
 			this.z = z;
 		}
 
+        public Vector3 normalize()
+        {
+            float magvec = this.length;
+            float x, y, z;
+            x = this.x / magvec;
+            y = this.y / magvec;
+            z = this.z / magvec;
+            return new Vector3(x, y, z);
+        }
 
-		public Vector3 normalize()
-		{
-			throw new NotImplementedException();
-		}
-
-		public static Vector3 operator *(Vector3 vec, float f)
+        public static Vector3 operator *(Vector3 vec, float f)
 		{
 			throw new NotImplementedException();
 		}
